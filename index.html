@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust Website</title>
 
-</head>
-<body>
+    <!-- Tailwind and DaisyUi Link Here -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    
-    
+    <!-- Custom Tailwind and DaisyUi -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        custom_color: '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Common Font Link Start Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Style Start Here -->
+    <style>
+        .lato_style {
+            font-family: 'Lato', sans-serif;
+        }
+
+        #search {
+            background-image: url('./images/search_2.png');
+            background-repeat: no-repeat;
+            background-position: 326px 1px;
+            /* font-size: 23px; */
+        }
+        .fixed-width{
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+    </style>
+
+</head>
+
+<body class="lato_style">
+
+    <header>
+        <!-- Navigation Menu Start Here -->
+        <nav class="flex justify-between items-center my-12 fixed-width bg-custom_color px-8 py-4 rounded-full">
+            <div class="menu-items">
+                <ul class="flex justify-between gap-7 text-white">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">All Fruits</a></li>
+                </ul>
+            </div>
+
+            <div class="logo-section flex items-center gap-4">
+                <div class="logo_image">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="logo_name">
+                    <h1 class="text-4xl font-bold text-white">Fruit Burst</h1>
+                </div>
+
+            </div>
+            <div class="search-box">
+                <input class="bg-white rounded-full py-2 px-4 w-96 border-0" type="text" placeholder=" Search here"
+                    name="" id="search">
+            </div>
+        </nav>
+         <!-- Navigation Menu Start Here -->
+         <!-- ------------------------------------------------------- -->
+
+        <div class="banner-section"></div>
+        <div class="banner-bottom-section"></div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+
+
+
 </body>
+
 </html>
