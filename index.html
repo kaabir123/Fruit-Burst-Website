@@ -2,205 +2,416 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Brust Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Brust Website</title>
 
-    <!-- Tailwind and DaisyUi Link Here -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind and DaisyUi Link Here -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Tailwind and DaisyUi -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                        custom_color: '#F85559',
-                    }
-                }
-            }
+  <!-- Custom Tailwind and DaisyUi -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            custom_color: '#F85559',
+
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <!-- Common Font Link Start Here -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Common Font Link Start Here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Font Style Start Here -->
-    <style>
-        .lato_style {
-            font-family: 'Lato', sans-serif;
-        }
+  <!-- Font Style Start Here -->
+  <style>
+    .lato_style {
+      font-family: 'Lato', sans-serif;
+    }
 
-        #search {
-            background-image: url('./images/search_2.png');
-            background-repeat: no-repeat;
-            background-position: 326px 1px;
-            /* font-size: 23px; */
-        }
-        .fixed-width{
-            max-width: 1280px;
-            margin: 0 auto;
-        }
+    #search {
+      background-image: url('./images/search_2.png');
+      background-repeat: no-repeat;
+      background-position: 326px 1px;
+      /* font-size: 23px; */
+    }
 
-    </style>
+    .fixed-width {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  </style>
 
 </head>
 
 <body class="lato_style">
 
-    <header>
-        <!-- Navigation Menu Start Here -->
-        <nav class="flex justify-between items-center my-10 max-w-screen-xl mx-auto bg-custom_color px-8 py-4 rounded-full">
-            <div class="menu-items">
-                <ul class="flex justify-between gap-7 text-white">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">All Fruits</a></li>
-                </ul>
+  <header>
+    <!-- Navigation Menu Start Here -->
+    <nav class="flex justify-between items-center my-10 max-w-screen-xl mx-auto bg-custom_color px-8 py-4 rounded-full">
+      <div class="menu-items">
+        <ul class="flex justify-between gap-7 text-white">
+          <li><a href="">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">All Fruits</a></li>
+        </ul>
+      </div>
+
+      <div class="logo-section flex items-center gap-4">
+        <div class="logo_image">
+          <img src="./images/logo.png" alt="">
+        </div>
+        <div class="logo_name">
+          <h1 class="text-4xl font-bold text-white">Fruit Burst</h1>
+        </div>
+
+      </div>
+      <div class="search-box">
+        <input class="bg-white rounded-full py-2 px-4 w-96 border-0" type="text" placeholder=" Search here" name=""
+          id="search">
+      </div>
+    </nav>
+    <!-- Navigation Menu Start Here -->
+    <!-- ------------------------------------------------------- -->
+
+    <!-- Banner Section Start Here -->
+    <div class="relative banner-section max-w-screen-xl mx-auto my-22">
+
+      <div class="carousel h-[34rem] rounded-lg w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class="hero" style="background-image: url('./images/banner1.png');">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-[41rem] ">
+                <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
+                <p class="mb-4">We supply highly quality organic products</p>
+                <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
+              </div>
             </div>
+          </div>
 
-            <div class="logo-section flex items-center gap-4">
-                <div class="logo_image">
-                    <img src="./images/logo.png" alt="">
-                </div>
-                <div class="logo_name">
-                    <h1 class="text-4xl font-bold text-white">Fruit Burst</h1>
-                </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
 
-            </div>
-            <div class="search-box">
-                <input class="bg-white rounded-full py-2 px-4 w-96 border-0" type="text" placeholder=" Search here"
-                    name="" id="search">
-            </div>
-        </nav>
-         <!-- Navigation Menu Start Here -->
-         <!-- ------------------------------------------------------- -->
-
-         <!-- Banner Section Start Here -->
-        <div class="banner-section max-w-screen-xl mx-auto my-22">
-           
-            <div class="carousel h-[34rem] rounded-lg w-full">
-                <div id="slide1" class="carousel-item relative w-full">  
-                  <div class="hero" style="background-image: url('./images/banner1.png');">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-[41rem] ">
-                        <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-4">We supply highly quality organic products</p>
-                        <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-
-             <div id="slide2" class="carousel-item relative w-full">
-              <div class="carousel h-[34rem] rounded-lg  w-full">
-                <div id="slide1" class="carousel-item relative w-full">  
-                  <div class="hero" style="background-image: url('./images/banner2.png');">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-[41rem] ">
-                        <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-4">We supply highly quality organic products</p>
-                        <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-
-                    <div class="carousel h-[34rem] rounded-lg w-full">
-                        <div id="slide1" class="carousel-item relative w-full">  
-                          <div class="hero" style="background-image: url('./images/banner3.png');">
-                            <div class="hero-overlay bg-opacity-60"></div>
-                            <div class="hero-content text-center text-neutral-content">
-                              <div class="max-w-[41rem] ">
-                                <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
-                                <p class="mb-4">We supply highly quality organic products</p>
-                                <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
-                              </div>
-                            </div>
-                          </div>
-
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-
-                    <div class="carousel h-[34rem] rounded-lg w-full">
-                        <div id="slide1" class="carousel-item relative w-full">  
-                          <div class="hero" style="background-image: url('./images/banner4.png');">
-                            <div class="hero-overlay bg-opacity-60"></div>
-                            <div class="hero-content text-center text-neutral-content">
-                              <div class="max-w-[41rem] ">
-                                <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
-                                <p class="mb-4">We supply highly quality organic products</p>
-                                <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
-                              </div>
-                            </div>
-                          </div>
-
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="carousel h-[34rem] rounded-lg  w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <div class="hero" style="background-image: url('./images/banner2.png');">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-[41rem] ">
+                    <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-4">We supply highly quality organic products</p>
+                    <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
                   </div>
                 </div>
               </div>
-            
-        </div>
-
-         <!-- Banner Section End Here -->
-         <!-- ------------------------------------------------------- -->
-    </header>
-
-    <main>
-
-        <div class="banner-bottom max-w-screen-lg p-5 mx-auto bg-white rounded-lg">
-
-            <div class="fruit-items py-4 px-4 flex items-center text-center justify-between">
-                <div class="fruits_1 ">
-                    <img src="./images/fruit1.png" alt="">
-                    <p>Red Grapes</p>
-                </div>
-                <div class="fruits_2">
-                    <img src="./images/fruit2.png" alt="">
-                    <p>Orange</p>
-                </div>
-                <div class="fruits_3">
-                    <img src="./images/fruit3.png" alt="">
-                    <p>Mango</p>
-                </div>
-                <div class="fruits_4">
-                    <img src="./images/fruit4.png" alt="">
-                    <p>Strawberry</p>
-                </div>
-                <div class="fruits_5">
-                    <img src="./images/fruit5.png" alt="">
-                    <p>Pomegranate</p>
-                </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
             </div>
+            <div id="slide3" class="carousel-item relative w-full">
+
+              <div class="carousel h-[34rem] rounded-lg w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <div class="hero" style="background-image: url('./images/banner3.png');">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-[41rem] ">
+                        <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-4">We supply highly quality organic products</p>
+                        <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+
+                  <div class="carousel h-[34rem] rounded-lg w-full">
+                    <div id="slide1" class="carousel-item relative w-full">
+                      <div class="hero" style="background-image: url('./images/banner4.png');">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                          <div class="max-w-[41rem] ">
+                            <h1 class="mb-4 text-7xl text-white w-auto font-bold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-4">We supply highly quality organic products</p>
+                            <button class="btn border-0 text-white bg-custom_color">Shop Now</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Banner Section End Here -->
+                <!-- ------------------------------------------------------- -->
+  </header>
+
+  <main>
+
+    <!-- Banner Bottom Start Here -->
+
+    <div
+      class="absolute left-[300px] top-[600px] banner-bottom max-w-screen-lg p-5 mx-auto drop-shadow-xl  bg-white rounded-lg">
+
+      <div class="fruit-items py-4 px-4 flex items-center gap-10 text-center justify-between">
+        <div class="fruits_1 ">
+          <img src="./images/fruit1.png" alt="">
+          <p>Red Grapes</p>
+        </div>
+        <div class="fruits_2">
+          <img src="./images/fruit2.png" alt="">
+          <p>Orange</p>
+        </div>
+        <div class="fruits_3">
+          <img src="./images/fruit3.png" alt="">
+          <p>Mango</p>
+        </div>
+        <div class="fruits_4">
+          <img src="./images/fruit4.png" alt="">
+          <p>Strawberry</p>
+        </div>
+        <div class="fruits_5">
+          <img src="./images/fruit5.png" alt="">
+          <p>Pomegranate</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Banner Bottom End Here -->
+    <!-- ------------------------------------------------------- -->
+
+    <!-- Deal Section Start Here -->
+
+    <div class="deal-section max-w-screen-xl mx-auto mt-52">
+
+      <div class="deal-top flex justify-between">
+
+        <div class="deal-top-left space-y-4 mb-32">
+          <h1 class="text-5xl font-bold">Deal of the day</h1>
+          <p class="text-black-200 max-w-screen-sm">Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+
+        <!-- Timer Count-down -->
+        <div class="deal-top-right">
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:32;"></span>
+              </span>
+              sec
+            </div>
+          </div>
 
         </div>
 
-    </main>
+      </div>
 
-    <footer></footer>
+
+      <div class="product-card-container flex gap-4 justify-between">
+        <!-- Card_01 -->
+        <div class="product-card space-y-5 border-blacks bg-white w-80 h-auto rounded-lg text-center justify-center py-10 drop-shadow-md mb-24">
+          <img class="m-auto my-4" src="./images/fruit6.png" alt="">
+          <h3 class="text-2xl font-bold text-black"> 12.90$ - 18.85$</h3>
+          <hr class="w-48 m-auto">
+          <h4>Apples</h4>
+
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          </div>
+          <br>
+
+          <!-- Open the modal using ID.showModal() method -->
+          <button class=" text-custom_color btn btn-ghost" onclick="my_modal_5.showModal()">Details</button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class=" space-y-4 bg-white modal-box">
+              <img class="m-auto" src="./images/fruit6.png" alt="">
+              <h3 class="font-bold text-lg text-black">Apple</h3>
+              <p class="py-4 w-96 m-auto">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class=" w-[12rem] m-auto modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline">Close</button>
+                <button class="btn bg-custom_color border-0 text-white ">Buy Now</button>
+              </div>
+            </form>
+          </dialog>
+
+        </div>
+
+
+        <!-- Card_02 -->
+        <div class="product-card space-y-5 border-blacks bg-white w-80 h-auto rounded-lg text-center justify-center py-10 drop-shadow-md mb-24">
+          <img class="m-auto my-4" src="./images/fruit6.png" alt="">
+          <h3 class="text-2xl font-bold text-black"> 12.90$ - 18.85$</h3>
+          <hr class="w-48 m-auto">
+          <h4>Apples</h4>
+
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          </div>
+          <br>
+
+          <!-- Open the modal using ID.showModal() method -->
+          <button class=" text-custom_color btn btn-ghost" onclick="my_modal_5.showModal()">Details</button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class=" space-y-4 bg-white modal-box">
+              <img class="m-auto" src="./images/fruit6.png" alt="">
+              <h3 class="font-bold text-lg text-black">Apple</h3>
+              <p class="py-4 w-96 m-auto">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class=" w-[12rem] m-auto modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline">Close</button>
+                <button class="btn bg-custom_color border-0 text-white ">Buy Now</button>
+              </div>
+            </form>
+          </dialog>
+
+        </div>
+
+
+
+        <!-- Card_03 -->
+
+        <div class="product-card space-y-5 border-blacks bg-white w-80 h-auto rounded-lg text-center justify-center py-10 drop-shadow-md mb-24">
+          <img class="m-auto my-4" src="./images/fruit6.png" alt="">
+          <h3 class="text-2xl font-bold text-black"> 12.90$ - 18.85$</h3>
+          <hr class="w-48 m-auto">
+          <h4>Apples</h4>
+
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          </div>
+          <br>
+
+          <!-- Open the modal using ID.showModal() method -->
+          <button class=" text-custom_color btn btn-ghost" onclick="my_modal_5.showModal()">Details</button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class=" space-y-4 bg-white modal-box">
+              <img class="m-auto" src="./images/fruit6.png" alt="">
+              <h3 class="font-bold text-lg text-black">Apple</h3>
+              <p class="py-4 w-96 m-auto">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class=" w-[12rem] m-auto modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline">Close</button>
+                <button class="btn bg-custom_color border-0 text-white ">Buy Now</button>
+              </div>
+            </form>
+          </dialog>
+
+        </div>
+    
+
+        <!-- Card_04 -->
+
+        <div class="product-card space-y-5 border-blacks bg-white w-80 h-auto rounded-lg text-center justify-center py-10 drop-shadow-md mb-24">
+          <img class="m-auto my-4" src="./images/fruit6.png" alt="">
+          <h3 class="text-2xl font-bold text-black"> 12.90$ - 18.85$</h3>
+          <hr class="w-48 m-auto">
+          <h4>Apples</h4>
+
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          </div>
+          <br>
+
+          <!-- Open the modal using ID.showModal() method -->
+          <button class=" text-custom_color btn btn-ghost" onclick="my_modal_5.showModal()">Details</button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class=" space-y-4 bg-white modal-box">
+              <img class="m-auto" src="./images/fruit6.png" alt="">
+              <h3 class="font-bold text-lg text-black">Apple</h3>
+              <p class="py-4 w-96 m-auto">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class=" w-[12rem] m-auto modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline">Close</button>
+                <button class="btn bg-custom_color border-0 text-white ">Buy Now</button>
+              </div>
+            </form>
+          </dialog>
+
+        </div>
+
+
+
+      </div>
+
+
+      <button class="btn text-center mr-50% text-white bg-custom_color m-auto">Shop All</button>
+    
+       
+    
+
+      
+
+    </div>
+
+
+
+      <!-- Deal Section End Here -->
+      <!-- ------------------------------------------------------- -->
+
+  </main>
+
+  <footer></footer>
 
 
 
